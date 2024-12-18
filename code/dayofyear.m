@@ -48,7 +48,9 @@ end
 
 % Calculate day of year
 doy = sum(daysPerMonth(1:d.Month-1)) + d.Day;
-
+f = fopen("/tmp/dayofyear.txt","wt");
+fprintf(f,"Day of year is: %d\n",doy);
+fclose(f);
 
 end
 
